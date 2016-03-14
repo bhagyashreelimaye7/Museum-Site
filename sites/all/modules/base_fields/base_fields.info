@@ -1,0 +1,16 @@
+name = Base fields
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = image
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = youtube
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_blog_image
+features[field_base][] = field_blog_video
+features[field_base][] = field_categories
+features[field_base][] = field_image
+features_exclude[taxonomy][categories] = categories
