@@ -30,7 +30,7 @@ function testimonial_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
@@ -106,6 +106,12 @@ function testimonial_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['path'] = 'testimony';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Testimonials';
@@ -113,6 +119,23 @@ function testimonial_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block_1');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '2';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['columns'] = '2';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Testimonials';
   $export['testimony'] = $view;
 
   return $export;
