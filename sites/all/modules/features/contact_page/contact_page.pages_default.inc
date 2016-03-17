@@ -11,7 +11,7 @@ function contact_page_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
-  $page->name = 'contact_us';
+  $page->name = 'Contact ';
   $page->task = 'page';
   $page->admin_title = 'Contact us';
   $page->admin_description = 'Contact us';
@@ -26,9 +26,9 @@ function contact_page_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_contact_us__panel';
+  $handler->name = 'page_Contact __panel_context_454f0e43-0beb-42da-9fbe-9da86e8902ec';
   $handler->task = 'page';
-  $handler->subtask = 'contact_us';
+  $handler->subtask = 'Contact ';
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
@@ -41,7 +41,7 @@ function contact_page_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'name' => '',
   );
   $display = new panels_display();
   $display->layout = 'flexible';
@@ -199,7 +199,7 @@ function contact_page_default_page_manager_pages() {
   $display->title_pane = 'new-17aabc64-e5bf-47df-90d7-aa2bb531e3cb';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
-  $pages[''] = $page;
+  $pages['Contact '] = $page;
 
   return $pages;
 
