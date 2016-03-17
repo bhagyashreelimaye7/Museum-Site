@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the testimonials panels feature.
  */
+
+include_once 'testimonials_panels.features.inc';
