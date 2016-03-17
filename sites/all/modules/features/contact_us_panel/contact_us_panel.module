@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Contact us panel feature.
- */
-
-include_once 'contact_us_panel.features.inc';
