@@ -51,7 +51,47 @@ function blog_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-blog-field_blog_categories'.
+  $field_instances['node-blog-field_blog_categories'] = array(
+    'bundle' => 'blog',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_blog_categories',
+    'label' => 'blog_categories',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 4,
     ),
   );
 
@@ -105,7 +145,7 @@ function blog_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => -3,
+      'weight' => 2,
     ),
   );
 
@@ -163,7 +203,7 @@ function blog_content_field_default_field_instances() {
       'module' => 'youtube',
       'settings' => array(),
       'type' => 'youtube',
-      'weight' => -2,
+      'weight' => 3,
     ),
   );
 
@@ -190,7 +230,7 @@ function blog_content_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_categories',
-    'label' => 'Categories',
+    'label' => 'Portfolio categories',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -198,9 +238,11 @@ function blog_content_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
       'type' => 'options_select',
-      'weight' => -1,
+      'weight' => 5,
     ),
   );
 
@@ -209,7 +251,8 @@ function blog_content_field_default_field_instances() {
   t('Blog_body');
   t('Blog_image');
   t('Blog_video');
-  t('Categories');
+  t('Portfolio categories');
+  t('blog_categories');
 
   return $field_instances;
 }
