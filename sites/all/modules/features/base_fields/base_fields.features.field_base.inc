@@ -255,6 +255,7 @@ function base_fields_field_default_field_bases() {
     'translatable' => 0,
     'type' => 'text',
   );
+
   // Exported field_base: 'field_blog_categories'.
   $field_bases['field_blog_categories'] = array(
     'active' => 1,
