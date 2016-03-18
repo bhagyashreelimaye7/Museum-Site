@@ -55,13 +55,6 @@ function blog_content_views_default_views() {
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'F j, Y';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   $handler->display->display_options['fields']['created']['timezone'] = 'Indian/Maldives';
-  /* Field: COUNT(Content statistics: Total views) */
-  $handler->display->display_options['fields']['totalcount']['id'] = 'totalcount';
-  $handler->display->display_options['fields']['totalcount']['table'] = 'node_counter';
-  $handler->display->display_options['fields']['totalcount']['field'] = 'totalcount';
-  $handler->display->display_options['fields']['totalcount']['group_type'] = 'count';
-  $handler->display->display_options['fields']['totalcount']['label'] = 'views';
-  $handler->display->display_options['fields']['totalcount']['element_label_colon'] = FALSE;
   /* Field: Content: Comment count */
   $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
   $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
@@ -151,12 +144,6 @@ function blog_content_views_default_views() {
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'F j, Y';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   $handler->display->display_options['fields']['created']['timezone'] = 'Indian/Maldives';
-  /* Field: Content statistics: Total views */
-  $handler->display->display_options['fields']['totalcount']['id'] = 'totalcount';
-  $handler->display->display_options['fields']['totalcount']['table'] = 'node_counter';
-  $handler->display->display_options['fields']['totalcount']['field'] = 'totalcount';
-  $handler->display->display_options['fields']['totalcount']['label'] = 'views';
-  $handler->display->display_options['fields']['totalcount']['element_label_colon'] = FALSE;
   /* Field: Content: Comment count */
   $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
   $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
@@ -177,7 +164,7 @@ function blog_content_views_default_views() {
   $handler->display->display_options['fields']['view']['label'] = '';
   $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view']['view'] = 'blog_statistics';
-  $handler->display->display_options['fields']['view']['arguments'] = '[!nid] ';
+  $handler->display->display_options['fields']['view']['arguments'] = '[!nid]';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -206,6 +193,9 @@ function blog_content_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Blog Blocks */
+  $handler = $view->new_display('block', 'Blog Blocks', 'block_1');
   $export['blogs'] = $view;
 
   return $export;
