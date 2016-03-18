@@ -28,6 +28,7 @@ features[field_base][] = field_blog_categories
 features[field_base][] = field_blog_image
 features[field_base][] = field_blog_video
 features[field_base][] = field_categories
+features[field_base][] = field_company_logo
 features[field_base][] = field_image
 features[field_base][] = field_image1
 features_exclude[taxonomy][categories] = categories
