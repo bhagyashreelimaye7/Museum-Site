@@ -4,6 +4,7 @@ package = Features
 version = 7.x-1.0
 dependencies[] = advpoll_field
 dependencies[] = blog_content
+dependencies[] = categories_view
 dependencies[] = date
 dependencies[] = features
 dependencies[] = image
@@ -23,12 +24,17 @@ features[field_base][] = advpoll_mode
 features[field_base][] = advpoll_options
 features[field_base][] = advpoll_results
 features[field_base][] = body
+<<<<<<< HEAD
 features[field_base][] = field_author_name
+=======
+features[field_base][] = field_blog_categories
+>>>>>>> 3fd2454eca7298bead3c92194de9c4d2fb9bf8c9
 features[field_base][] = field_blog_image
 features[field_base][] = field_blog_video
 features[field_base][] = field_categories
+features[field_base][] = field_company_logo
 features[field_base][] = field_image
 features[field_base][] = field_image1
 features[field_base][] = field_relation
 features_exclude[taxonomy][categories] = categories
-project path = sites/all/modules/features
+project path = sites/all/modules/
