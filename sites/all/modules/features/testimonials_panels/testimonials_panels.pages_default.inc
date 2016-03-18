@@ -195,10 +195,10 @@ function testimonials_panels_default_page_manager_pages() {
     $display->content['new-1e85efcb-0afe-41ec-b4bb-c42ddfb8042f'] = $pane;
     $display->panels['sidebar1'][0] = 'new-1e85efcb-0afe-41ec-b4bb-c42ddfb8042f';
     $pane = new stdClass();
-    $pane->pid = 'new-f8cdab1a-9540-41c8-a276-a5ed854ba31f';
+    $pane->pid = 'new-d6baebfb-db0e-4e8b-b229-c3849ae1d6af';
     $pane->panel = 'sidebar2';
     $pane->type = 'block';
-    $pane->subtype = 'advpoll-advpoll_block_41';
+    $pane->subtype = 'advpoll-advpoll_block_27';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -214,9 +214,9 @@ function testimonials_panels_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'f8cdab1a-9540-41c8-a276-a5ed854ba31f';
-    $display->content['new-f8cdab1a-9540-41c8-a276-a5ed854ba31f'] = $pane;
-    $display->panels['sidebar2'][0] = 'new-f8cdab1a-9540-41c8-a276-a5ed854ba31f';
+    $pane->uuid = 'd6baebfb-db0e-4e8b-b229-c3849ae1d6af';
+    $display->content['new-d6baebfb-db0e-4e8b-b229-c3849ae1d6af'] = $pane;
+    $display->panels['sidebar2'][0] = 'new-d6baebfb-db0e-4e8b-b229-c3849ae1d6af';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
