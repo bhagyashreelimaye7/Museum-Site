@@ -127,7 +127,7 @@ function company_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_url',
-    'label' => 'URL',
+    'label' => 'Site URL',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
@@ -165,7 +165,7 @@ function company_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Company logo');
-  t('URL');
+  t('Site URL');
 
   return $field_instances;
 }
